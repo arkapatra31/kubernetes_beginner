@@ -1,0 +1,1 @@
+minikube start --driver=virtualbox  - Starts kubernetes cluster in host mentioned in driver
