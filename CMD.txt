@@ -1,1 +1,3 @@
 minikube start --driver=virtualbox  - Starts kubernetes cluster in host mentioned in driver
+
+kubectl [command] [TYPE] [NAME] [flags] - Kubectl command line format
