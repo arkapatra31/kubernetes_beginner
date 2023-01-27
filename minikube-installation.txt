@@ -1,0 +1,9 @@
+1. Install minikube using binary download 
+    curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-darwin-amd64
+    sudo install minikube-darwin-amd64 /usr/local/bin/minikube
+
+2. Start cluster on docker (Since using Docker as a HyperV)
+    minikube start --driver=docker
+
+3. Make docker as the default driver
+    minikube config set driver docker

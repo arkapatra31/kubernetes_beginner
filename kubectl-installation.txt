@@ -1,0 +1,18 @@
+1. Download the latest release
+    curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/darwin/amd64/kubectl"
+
+2. Download the kubectl checksum file 
+    curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/darwin/amd64/kubectl.sha256"
+
+3. Validate the kubectl binary against the checksum file
+    echo "$(cat kubectl.sha256)  kubectl" | shasum -a 256 --check - This should print kubectl: OK
+
+4. Make the kubectl binary executable
+    chmod +x ./kubectl
+
+5. Check cluster state 
+    kubectl cluster-info
+
+6. If kubectl cluster-info returns the url response but you can't access your cluster, to check whether it is 
+   configured properly, use:
+        kubectl cluster-info dump
