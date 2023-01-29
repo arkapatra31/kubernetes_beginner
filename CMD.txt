@@ -1,3 +1,5 @@
 minikube start --driver=virtualbox  - Starts kubernetes cluster in host mentioned in driver
-
 kubectl [command] [TYPE] [NAME] [flags] - Kubectl command line format
+
+kubectl run container_name --image=container_name - Runs a kubernetes pod consiting of the instance of the container
+kubectl describe pod pod_name - Description of the pod
